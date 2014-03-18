@@ -4,37 +4,37 @@ layout: default
 
 
 <div class="heading" id="toc">
-  <h2>Table of contents</h2>
+  <h2>目錄</h2>
 </div>
 <div class="section toc">
   <div class="col">
     <h4><a href="#html">HTML</a></h4>
     <ul>
-      <li><a href="#html-syntax">Syntax</a></li>
+      <li><a href="#html-syntax">語法</a></li>
       <li><a href="#html-doctype">HTML5 doctype</a></li>
-      <li><a href="#html-encoding">Character encoding</a></li>
-      <li><a href="#html-style-script">CSS and JavaScript includes</a></li>
-      <li><a href="#html-practicality">Practicality over purity</a></li>
-      <li><a href="#html-attribute-order">Attribute order</a></li>
-      <li><a href="#html-boolean-attributes">Boolean attributes</a></li>
-      <li><a href="#html-reducing-markup">Reducing markup</a></li>
-      <li><a href="#html-javascript">JavaScript generated markup</a></li>
+      <li><a href="#html-encoding">字元編碼</a></li>
+      <li><a href="#html-style-script">引用 CSS 與 JavaScript</a></li>
+      <li><a href="#html-practicality">實用性勝過純粹性</a></li>
+      <li><a href="#html-attribute-order">屬性順序</a></li>
+      <li><a href="#html-boolean-attributes">布林屬性</a></li>
+      <li><a href="#html-reducing-markup">減少 Markup</a></li>
+      <li><a href="#html-javascript">JavaScript 產生的 Markup</a></li>
     </ul>
   </div>
   <div class="col">
     <h4><a href="#css">CSS</a></h4>
     <ul>
-      <li><a href="#css-syntax">CSS syntax</a></li>
-      <li><a href="#css-declaration-order">Declaration order</a></li>
-      <li><a href="#css-media-queries">Media query placement</a></li>
-      <li><a href="#css-prefixed-properties">Prefixed properties</a></li>
-      <li><a href="#css-single-declarations">Rules with single declarations</a></li>
-      <li><a href="#css-shorthand">Shorthand notation</a></li>
-      <li><a href="#css-nesting">Nesting in Less and Sass</a></li>
-      <li><a href="#css-comments">Comments</a></li>
-      <li><a href="#css-classes">Classes</a></li>
-      <li><a href="#css-selectors">Selectors</a></li>
-      <li><a href="#css-organization">Organization</a></li>
+      <li><a href="#css-syntax">CSS 語法</a></li>
+      <li><a href="#css-declaration-order">宣告順序</a></li>
+      <li><a href="#css-media-queries">Media query 擺放位置</a></li>
+      <li><a href="#css-prefixed-properties">具前綴的特性</a></li>
+      <li><a href="#css-single-declarations">單一宣告規則</a></li>
+      <li><a href="#css-shorthand">簡寫記法</a></li>
+      <li><a href="#css-nesting">Less 與 Sass 中的巢狀</a></li>
+      <li><a href="#css-comments">註解</a></li>
+      <li><a href="#css-classes">類別</a></li>
+      <li><a href="#css-selectors">選擇器</a></li>
+      <li><a href="#css-organization">組織</a></li>
     </ul>
   </div>
 </div>
@@ -42,12 +42,12 @@ layout: default
 
 <div class="section" id="golden-rule">
   <div class="col">
-    <h2>Golden rule</h2>
-    <p>Enforce these, or your own, agreed upon guidelines at all times. Small or large, call out what's incorrect. For additions or contributions to this Code Guide, please <a href="https://github.com/mdo/code-guide/issues/new">open an issue on GitHub</a>.</p>
+    <h2>不二法門</h2>
+    <p>不管是下面的準則或您自己的準則，只要用同樣的準則即可。如有任何不對之處，請不吝指教。若想新增或貢獻內容，請至 <a href="https://github.com/mdo/code-guide/issues/new">GitHub 來提 issue</a>。</p>
   </div>
   <div class="col">
     <blockquote>
-      <p>Every line of code should appear to be written by a single person, no matter the number of contributors.</p>
+      <p>不管有多少個貢獻者，每行程式碼都應該像是同一人所寫。</p>
     </blockquote>
   </div>
 </div>
@@ -60,13 +60,13 @@ layout: default
 
 <div class="section" id="html-syntax">
   <div class="col">
-    <h3>Syntax</h3>
+    <h3>語法</h3>
     <ul>
-      <li>Use soft tabs with two spaces—they're the only way to guarantee code renders the same in any environment.</li>
-      <li>Nested elements should be indented once (two spaces).</li>
-      <li>Always use double quotes, never single quotes, on attributes.</li>
-      <li>Don't include a trailing slash in self-closing elements—the <a href="http://dev.w3.org/html5/spec-author-view/syntax.html#syntax-start-tag">HTML5 spec</a> says they're optional.</li>
-      <li>Don’t omit optional closing tags (e.g. <code>&lt;/li&gt;</code> or <code>&lt;/body&gt;</code>).</li>
+      <li>使用 2 個空格的 soft tabs—這是唯一可以保證程式碼在任何環境下，render 結果一致的方法。</li>
+      <li>巢狀式元素應縮排一次（兩個空格）。</li>
+      <li>屬性永遠使用雙引號，永遠別用單引號。</li>
+      <li>自我結尾元素最後不要使用斜線，─<a href="http://dev.w3.org/html5/spec-author-view/syntax.html#syntax-start-tag">HTML5 規範</a>表示可省。</li>
+      <li>不要忽略可不寫的關閉標籤（比如 <code>&lt;/li&gt;</code> 或 <code>&lt;/body&gt;</code>）。</li>
     </ul>
   </div>
   <div class="col">
@@ -77,7 +77,7 @@ layout: default
 <div class="section" id="html-doctype">
   <div class="col">
     <h3>HTML5 doctype</h3>
-    <p>Enforce standards mode and more consistent rendering in every browser possible with this simple doctype at the beginning of every HTML page.</p>
+    <p>每個 HTML 頁面開頭使用這個簡單的 doctype，來啟用標準模式。每個瀏覽器將會有更加一致的 render 結果。</p>
   </div>
   <div class="col">
     {% highlight html %}{% include html/doctype.html %}{% endhighlight %}
@@ -86,8 +86,8 @@ layout: default
 
 <div class="section" id="html-encoding">
   <div class="col">
-    <h3>Character encoding</h3>
-    <p>Quickly and easily ensure proper rendering of your content by declaring an explicit character encoding.</p>
+    <h3>字元編碼</h3>
+    <p>明確宣告字元編碼來快速簡單地確保內容 render 正確無誤。</p>
   </div>
   <div class="col">
     {% highlight html %}{% include html/encoding.html %}{% endhighlight %}
@@ -96,13 +96,13 @@ layout: default
 
 <div class="section" id="html-style-script">
   <div class="col">
-    <h3>CSS and JavaScript includes</h3>
-    <p>Per HTML5 spec, typically there is no need to specify a <code>type</code> when including CSS and JavaScript files as <code>text/css</code> and <code>text/javascript</code> are their respective defaults.</p>
-    <h4>HTML5 spec links</h4>
+    <h3>引用 CSS 與 JavaScript</h3>
+    <p>根據 HTML5 規範，引用 JavaScript 與 CSS 檔案時，無需指定 CSS 與 JavaScript 的 <code>type</code>。因為預設值便是 <code>text/css</code> 和 <code>text/javascript</code>。</p>
+    <h4>HTML5 規範出處</h4>
     <ul>
-      <li><a href="http://www.w3.org/TR/2011/WD-html5-20110525/semantics.html#the-link-element">Using link</a></li>
-      <li><a href="http://www.w3.org/TR/2011/WD-html5-20110525/semantics.html#the-style-element">Using style</a></li>
-      <li><a href="http://www.w3.org/TR/2011/WD-html5-20110525/scripting-1.html#the-script-element">Using script</a></li>
+      <li><a href="http://www.w3.org/TR/2011/WD-html5-20110525/semantics.html#the-link-element">使用 link</a></li>
+      <li><a href="http://www.w3.org/TR/2011/WD-html5-20110525/semantics.html#the-style-element">使用 style</a></li>
+      <li><a href="http://www.w3.org/TR/2011/WD-html5-20110525/scripting-1.html#the-script-element">使用 script</a></li>
     </ul>
   </div>
   <div class="col">
@@ -112,15 +112,15 @@ layout: default
 
 <div class="section" id="html-practicality">
   <div class="col">
-    <h3>Practicality over purity</h3>
-    <p>Strive to maintain HTML standards and semantics, but not at the expense of practicality. Use the least amount of markup with the fewest intricacies whenever possible.</p>
+    <h3>實用性勝過純粹性</h3>
+    <p>在不犧牲實用性的前提下，盡力維持 HTML 的標準與語義。盡量使用簡潔、簡單的 Markup。</p>
   </div>
 </div>
 
 <div class="section" id="html-attribute-order">
   <div class="col">
-    <h3>Attribute order</h3>
-    <p>HTML attributes should come in this particular order for easier reading of code.</p>
+    <h3>屬性順序</h3>
+    <p>HTML 屬性應按照特定順序撰寫，確保程式碼的易讀性。</p>
     <ul>
       <li><code>class</code></li>
       <li><code>id</code>, <code>name</code></li>
@@ -129,7 +129,7 @@ layout: default
       <li><code>title</code>, <code>alt</code></li>
       <li><code>aria-*</code>, <code>role</code></li>
     </ul>
-    <p>Classes make for great reusable components, so they come first. Ids are more specific and should be used sparingly (e.g., for in-page bookmarks), so they come second.</p>
+    <p>Class 是為了重用的元素而生，應該排第一位。ID 具體得多，應盡量少用（可用場景像是頁內書籤），所以排第二位。</p>
   </div>
   <div class="col">
     {% highlight html %}{% include html/attribute-order.html %}{% endhighlight %}
@@ -139,16 +139,16 @@ layout: default
 <div class="section" id="html-boolean-attributes">
   <div class="col">
     <h3>Boolean attributes</h3>
-    <p>A boolean attribute is one that needs no declared value. XHTML required you to declare a value, but HTML5 has no such requirement.</p>
-    <p>For further reading, consult the <a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/common-microsyntaxes.html#boolean-attributes">WhatWG section on boolean attributes</a>:</p>
+    <p>布林屬性是不需要寫值的屬性。XHTML 要求你宣告數值，但 HTML5 不需要。</p>
+    <p>深入閱讀請查閱 <a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/common-microsyntaxes.html#boolean-attributes">WhatWG 關於布林屬性一節</a>：</p>
     <blockquote>
-      <p>The presence of a boolean attribute on an element represents the true value, and the absence of the attribute represents the false value.</p>
+      <p>元素有布林屬性存在即代表 true value，反之不存在則代表 false value。</p>
     </blockquote>
-    <p>If you <em>must</em> include the attribute's value, and <strong>you don't need to</strong>, follow this WhatWG guideline:</p>
+    <p>如果<strong>一定要</strong>附上屬性的數值的話，則<strong>無需</strong>遵守 WhatWG 的這條規則：</p>
     <blockquote>
-      <p>If the attribute is present, its value must either be the empty string or [...] the attribute's canonical name, with no leading or trailing whitespace.</p>
+      <p>如果有寫屬性的話，其數值必須是空字串或是屬性的標準名稱（需符合 <a href="//www.whatwg.org/specs/web-apps/current-work/multipage/infrastructure.html#ascii-case-insensitive">ASCII 不分大小寫</a>的規則），且前後不可有空白。</p>
     </blockquote>
-    <p><strong>In short, don't add a value.</strong></p>
+    <p><strong>長話短說，不用寫數值。</strong></p>
   </div>
   <div class="col">
     {% highlight html %}{% include html/boolean-attributes.html %}{% endhighlight %}
@@ -157,8 +157,8 @@ layout: default
 
 <div class="section" id="html-reducing-markup">
   <div class="col">
-    <h3>Reducing markup</h3>
-    <p>Whenever possible, avoid superfluous parent elements when writing HTML. Many times this requires iteration and refactoring, but produces less HTML. Take the following example:</p>
+    <h3>簡化 Markup</h3>
+    <p>撰寫 HTML 時，盡量避免多餘的父元素。這需要反覆重寫與重構，才能寫出更少的 HTML。看看右邊這個例子：</p>
   </div>
   <div class="col">
     {% highlight html %}{% include html/reducing-markup.html %}{% endhighlight %}
@@ -167,8 +167,8 @@ layout: default
 
 <div class="section" id="html-javascript">
   <div class="col">
-    <h3>JavaScript generated markup</h3>
-    <p>Writing markup in a JavaScript file makes the content harder to find, harder to edit, and less performant. Avoid it whenever possible.</p>
+    <h3>JavaScript 產生的 Markup</h3>
+    <p>Markup 寫在 JavaScript 裡，不僅難找、也更難編輯，性能更是差。盡量避免在 JavaScript 裡撰寫 Markup。</p>
   </div>
 </div>
 
@@ -180,23 +180,23 @@ layout: default
 
 <div class="section" id="css-syntax">
   <div class="col">
-    <h3>Syntax</h3>
+    <h3>語法</h3>
     <ul>
-      <li>Use soft tabs with two spaces—they're the only way to guarantee code renders the same in any environment.</li>
-      <li>When grouping selectors, keep individual selectors to a single line.</li>
-      <li>Include one space before the opening brace of declaration blocks for legibility.</li>
-      <li>Place closing braces of declaration blocks on a new line.</li>
-      <li>Include one space after <code>:</code> for each declaration.</li>
-      <li>Each declaration should appear on its own line for more accurate error reporting.</li>
-      <li>End all declarations with a semi-colon. The last declaration's is optional, but your code is more error prone without it.</li>
-      <li>Comma-separated property values should include a space after each comma (e.g., <code>box-shadow</code>).</li>
-      <li>Don't include spaces after commas <em>within</em> <code>rgb()</code>, <code>rgba()</code>, <code>hsl()</code>, <code>hsla()</code>, or <code>rect()</code> values. This helps differentiate multiple color values (comma, no space) from multiple property values (comma with space). Also, don't prefix values with a leading zero (e.g., <code>.5</code> instead of <code>0.5</code>).</li>
-      <li>Lowercase all hex values, e.g., <code>#fff</code>. Lowercase letters are much easier to discern when scanning a document as they tend to have more unique shapes.</li>
-      <li>Use shorthand hex values where available, e.g., <code>#fff</code> instead of <code>#ffffff</code>.</li>
-      <li>Quote attribute values in selectors, e.g., <code>input[type="text"]</code>. <a href="http://mathiasbynens.be/notes/unquoted-attribute-values#css">They’re only optional in some cases</a>, and it’s a good practice for consistency.</li>
-      <li>Avoid specifying units for zero values, e.g., <code>margin: 0;</code> instead of <code>margin: 0px;</code>.</li>
+      <li>使用 2 個空格的 soft tabs─這是唯一可以保證程式碼在任何環境下，render 結果一致的方法。</li>
+      <li>幫選擇器分組時，獨立的選擇器自成一行。</li>
+      <li>左大括號左邊留 1 個空白來提升可讀性。</li>
+      <li>右大括號應另起新行。</li>
+      <li>每條宣告裡的 <code>:</code> 後面留一個空白。</li>
+      <li>每條宣告應自成一行，錯誤會回報的更精準。</li>
+      <li>每條宣告用分號結束。最後一個宣告可寫可不寫，但沒寫較容易出錯。</li>
+      <li>以逗號分隔的特性，逗號後要加一個空白（比如右例的 <code>box-shadow</code>，<code>inset</code>前方逗號後有留空白）。</li>
+      <li><code>rgb()</code>、<code>rgba()</code>、<code>hsl()</code>、<code>hsla()</code> 或 <code>rect()</code>裡的數值，逗號後不要加空白。這讓色彩值（逗號後不加空白）與特性值（逗號後加空白）可以區分出來。小數值簡寫成 <code>.5</code>，不要寫成 <code>0.5</code>。</li>
+      <li>hex 值全小寫，如：<code>#fff</code>。在快速掃過文件時，小寫符號比大寫符號更容易分辨，因為形狀較為不同。</li>
+      <li>盡可能使用 hex 值的簡寫，比如用 <code>#fff</code> 來取代 <code>#ffffff</code>。</li>
+      <li>選擇器中的屬性值要用雙引號包起來，比如 <code>input[type="text"]</code>。<a href="http://mathiasbynens.be/notes/unquoted-attribute-values#css">屬性值只有某些情況下可省略</a>，加引號的一致性更好。</li>
+      <li>0 不用寫單位。寫成 <code>margin: 0;</code> 而不是 <code>margin: 0px;</code>。</li>
     </ul>
-    <p>Questions on the terms used here? See the <a href="http://en.wikipedia.org/wiki/Cascading_Style_Sheets#Syntax">syntax section of the Cascading Style Sheets article</a> on Wikipedia.</p>
+    <p>對於這裡使用的術語有任何問題嗎？請參考維基百科上關於<a href="http://en.wikipedia.org/wiki/Cascading_Style_Sheets#Syntax">層疊樣式表條目裡的語法小節</a>。</p>
   </div>
   <div class="col">
     {% highlight css %}{% include css/syntax.css %}{% endhighlight %}
@@ -205,17 +205,17 @@ layout: default
 
 <div class="section" id="css-declaration-order">
   <div class="col">
-    <h3>Declaration order</h3>
-    <p>Related property declarations should be grouped together following the order:</p>
+    <h3>宣告順序</h3>
+    <p>相關的屬性宣告應以下列順序分組：</p>
     <ol>
       <li>Positioning</li>
-      <li>Box model</li>
+      <li>Box Model</li>
       <li>Typographic</li>
       <li>Visual</li>
     </ol>
-    <p>Positioning comes first because it can remove an element from the normal flow of the document and override box model related styles. The box model comes next as it dictates a component's dimensions and placement.</p>
-    <p>Everything else takes place <em>inside</em> the component or without impacting the previous two sections, and thus they come last.</p>
-    <p>For a complete list of properties and their order, please see <a href="http://twitter.github.com/recess">Recess</a>.</p>
+    <p>Positioning，與位置有關的宣告放最前面，因為這可以從正常文件順序裡移除元素，或是覆寫牽扯到 Box Model 的樣式。Box Model 放下一個。因為它決定元件的位置與尺寸。</p>
+    <p>其它只在元件<strong>內部</strong>起作用的屬性放最後，因為這不會影響前兩者。</p>
+    <p>關於屬性順序的完整列表，請參考 <a href="http://twitter.github.com/recess">Recess</a>。</p>
   </div>
   <div class="col">
     {% highlight css %}{% include css/declaration-order.css %}{% endhighlight %}
@@ -224,8 +224,8 @@ layout: default
 
 <div class="section" id="css-media-queries">
   <div class="col">
-    <h3>Media query placement</h3>
-    <p>Place media queries as close to their relevant rule sets whenever possible. Don't bundle them all in a separate stylesheet or at the end of the document. Doing so only makes it easier for folks to miss them in the future. Here's a typical setup.</p>
+    <h3>Media Query 擺放位置</h3>
+    <p>將 Media Query 與其最相關的規則放在一起。別把他們放在 CSS 檔案最後面，或是獨立成另外的樣式表。這樣只會讓之後接手的人錯過他們。右邊是個經典範例。</p>
   </div>
   <div class="col">
     {% highlight css %}{% include css/media-queries.css %}{% endhighlight %}
@@ -234,9 +234,9 @@ layout: default
 
 <div class="section" id="css-prefixed-properties">
   <div class="col">
-    <h3>Prefixed properties</h3>
-    <p>When using vendor prefixed properties, indent each property such that the declaration's value lines up vertically for easy multi-line editing.</p>
-    <p>In Textmate, use <strong>Text &rarr; Edit Each Line in Selection</strong> (&#8963;&#8984;A). In Sublime Text 2, use <strong>Selection &rarr; Add Previous Line</strong> (&#8963;&#8679;&uarr;) and <strong>Selection &rarr;  Add Next Line</strong> (&#8963;&#8679;&darr;).</p>
+    <h3>具前綴的屬性</h3>
+    <p>使用帶有各家廠商前綴的屬性時，縮排每個屬性、垂直對齊，以便多行編輯。</p>
+    <p>Textmate 裡，使用 <strong>Text &rarr; Edit Each Line in Selection</strong> (&#8963;&#8984;A)。Sublime Text 2 則用 <strong>Selection &rarr; Add Previous Line</strong> (&#8963;&#8679;&uarr;) 和 <strong>Selection &rarr;  Add Next Line</strong> (&#8963;&#8679;&darr;)。</p>
   </div>
   <div class="col">
     {% highlight css %}{% include css/prefixed-properties.css %}{% endhighlight %}
@@ -245,9 +245,9 @@ layout: default
 
 <div class="section" id="css-single-declarations">
   <div class="col">
-    <h3>Single declarations</h3>
-    <p>In instances where a rule set includes <strong>only one declaration</strong>, consider removing line breaks for readability and faster editing. Any rule set with multiple declarations should be split to separate lines.</p>
-    <p>The key factor here is error detection—e.g., a CSS validator stating you have a syntax error on Line 183. With a single declaration, there's no missing it. With multiple declarations, separate lines is a must for your sanity.</p>
+    <h3>單行宣告</h3>
+    <p>當一組規則<strong>只包含單條宣告的</strong>的情況裡，考慮移除換行；寫成單行的可讀性更高、更容易編輯。任何包含多條宣告的一組規則應該要分為多行。</p>
+    <p>這麼分的關鍵因素是錯誤偵測─比如：CSS Validator 表示 183 行有語法錯誤。如果是單行宣告便就是那行，多條宣告沒分行的話則會找到抓狂。</p>
   </div>
   <div class="col">
     {% highlight css %}{% include css/single-declarations.css %}{% endhighlight %}
@@ -256,8 +256,8 @@ layout: default
 
 <div class="section" id="css-shorthand">
   <div class="col">
-    <h3>Shorthand notation</h3>
-    <p>Strive to limit use of shorthand declarations to instances where you must explicitly set all the available values. Common overused shorthand properties include:</p>
+    <h3>簡寫記法</h3>
+    <p>宣告盡量少用簡寫，最好明確的將所有的值寫出來。過度濫用簡寫的特性包含：</p>
     <ul>
       <li><code>padding</code></li>
       <li><code>margin</code></li>
@@ -266,8 +266,8 @@ layout: default
       <li><code>border</code></li>
       <li><code>border-radius</code></li>
     </ul>
-    <p>Often times we don't need to set all the values a shorthand property represents. For example, HTML headings only set top and bottom margin, so when necessary, only override those two values. Excessive use of shorthand properties often leads to sloppier code with unnecessary overrides and unintended side effects.</p>
-    <p>The Mozilla Developer Network has a great article on <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Shorthand_properties">shorthand properties</a> for those unfamiliar with notation and behavior.</p>
+    <p>通常我們只需設定需要的值，簡寫會設定到多餘的值。舉例來說，HTML 標題只會設定 top 與 bottom margin，所以只要更改這兩個值即可。濫用特性縮寫只會寫出更差的程式碼，也會有無謂的覆寫與不預期的副作用。</p>
+    <p>Mozilla Developer Network 有篇很好的專文，給不熟悉記法與行為的開發者：<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Shorthand_properties">特性簡寫</a>。</p>
   </div>
   <div class="col">
     {% highlight css %}{% include css/shorthand.css %}{% endhighlight %}
@@ -276,8 +276,8 @@ layout: default
 
 <div class="section" id="css-nesting">
   <div class="col">
-    <h3>Nesting in Less and Sass</h3>
-    <p>Avoid unnecessary nesting. Just because you can nest, doesn't mean you always should. Consider nesting only if you must scope styles to a parent and if there are multiple elements to be nested.</p>
+    <h3>Less 和 Sass 裡的巢狀</h3>
+    <p>避免無謂的巢狀。你能巢狀不表示你都要用巢狀。只在多元素需要巢狀，或是需要在父元素下增加樣式的場景下使用巢狀。</p>
   </div>
   <div class="col">
     {% highlight scss %}{% include css/nesting.scss %}{% endhighlight %}
@@ -286,9 +286,9 @@ layout: default
 
 <div class="section" id="css-comments">
   <div class="col">
-    <h3>Comments</h3>
-    <p>Code is written and maintained by people. Ensure your code is descriptive, well commented, and approachable by others. Great code comments convey context or purpose. Do not simply reiterate a component or class name.</p>
-    <p>Be sure to write in complete sentences for larger comments and succinct phrases for general notes.</p>
+    <h3>註解</h3>
+    <p>程式碼是由人來撰寫與維護的。確保程式碼精準描述、有良好的註解，讓別人看起來是很親切。好的註解傳遞意圖、意境。註解不要只是重複元件或是 Class 的名稱。</p>
+    <p>長註解記得使用完整的句子，一般的筆記用簡潔的用語。</p>
   </div>
   <div class="col">
     {% highlight css %}{% include css/comments.css %}{% endhighlight %}
@@ -297,14 +297,14 @@ layout: default
 
 <div class="section" id="css-classes">
   <div class="col">
-    <h3>Class names</h3>
+    <h3>Class 名稱</h3>
     <ul>
-      <li>Keep classes lowercase and use dashes (not underscores or camelCase). Dashes serve as natural breaks in related class (e.g., <code>.btn</code> and <code>.btn-danger</code>).</li>
-      <li>Avoid excessive and arbitrary shorthand notation. <code>.btn</code> is useful for <em>button</em>, but <code>.s</code> doesn't mean anything.</li>
-      <li>Keep classes as short and succinct as possible.</li>
-      <li>Use meaningful names; use structural or purposeful names over presentational.</li>
-      <li>Prefix classes based on the closest parent or base class.</li>
-      <li>Use <code>.js-*</code> classes to denote behavior (as opposed to style), but keep these classes out of your CSS.</li>
+      <li>Class 名稱為小寫，使用連接號，dash。（不要使用底線或 camelCase）。連接號作為相關 Class 的分類符。（像是 <code>.btn</code> 和 <code>.btn-danger</code>）。</li>
+      <li>避免使用過短、隨便的縮寫。 <em>button</em> 簡寫為 <code>.btn</code> 很好，但 <code>.s</code> 不代表任何元素。</li>
+      <li>盡量保持 Class 簡潔有力。</li>
+      <li>使用有意義的名字；使用有意義、能說明結構的名稱，而不是外表看起來的名稱。</li>
+      <li>根據最近的父類、基類加上前綴。</li>
+      <li>使用 <code>.js-*</code> Class 來標示行為（相對樣式來說），這些類別放在另外的 CSS。</li>
     </ul>
   </div>
   <div class="col">
@@ -314,14 +314,14 @@ layout: default
 
 <div class="section" id="css-selectors">
   <div class="col">
-    <h3>Selectors</h3>
+    <h3>選擇器</h3>
     <ul>
-      <li>Use classes over generic element tag for optimum rendering performance.</li>
-      <li>Avoid using several attribute selectors (e.g., <code>[class^="..."]</code>) on commonly occuring components. Browser performance is known to be impacted by these.</li>
-      <li>Keep selectors short and strive to limit the number of elements in each selector to three.</li>
-      <li>Scope classes to the closest parent <strong>only</strong> when necessary (e.g., when not using prefixed classes).</li>
+      <li>就 render 的性能來說，使用 Class 會比通用的元素標籤好。</li>
+      <li>重複出現的元件，避免使用多個屬性選擇器（比如：<code>[class^="..."]</code>）。大家都知道這會影響到瀏覽器的性能。</li>
+      <li>保持選擇器簡短，每個選擇器盡量不要超過 3 個元素。</li>
+      <li><strong>只</strong>在需要的情況下使用後代 Class （比如沒有使用前綴 class 的情況）。</li>
     </ul>
-    <p>Additional reading:</p>
+    <p>延伸閱讀：</p>
     <ul>
       <li><a href="http://markdotto.com/2012/02/16/scope-css-classes-with-prefixes/">Scope CSS classes with prefixes</a></li>
       <li><a href="http://markdotto.com/2012/03/02/stop-the-cascade/">Stop the cascade</a></li>
@@ -334,12 +334,12 @@ layout: default
 
 <div class="section" id="css-organization">
   <div class="col">
-    <h3>Organization</h3>
+    <h3>組織</h3>
     <ul>
-      <li>Organize sections of code by component.</li>
-      <li>Develop a consistent commenting hierarchy.</li>
-      <li>Use consistent white space to your advantage when separating sections of code for scanning larger documents.</li>
-      <li>When using multiple CSS files, break them down by component instead of page. Pages can be rearranged and components moved.</li>
+      <li>依元件組織程式碼段落。</li>
+      <li>使用一致的註解層級。</li>
+      <li>程式碼分段使用定量的空白，瀏覽大檔案時很有幫助。</li>
+      <li>維護多個 CSS 檔案時，依照元素而不是頁面來分類。頁面可能會改，但元件移動就可以了。</li>
     </ul>
   </div>
   <div class="col">
@@ -349,14 +349,14 @@ layout: default
 
 <div class="section" id="css-editor-prefs">
   <div class="col">
-    <h3>Editor preferences</h3>
-    <p>Set your editor to the following settings to avoid common code inconsistencies and dirty diffs:</p>
+    <h3>編輯喜好</h3>
+    <p>使用下列設定來設定編輯器，避免掉常見的程式碼不一致和醜陋的 diffs：</p>
     <ul>
-      <li>Use soft-tabs set to two spaces.</li>
-      <li>Trim trailing white space on save.</li>
-      <li>Set encoding to UTF-8.</li>
-      <li>Add new line at end of files.</li>
+      <li>使用兩個空白的 soft-tabs。</li>
+      <li>存檔時殺掉尾隨空白。</li>
+      <li>編碼設定為 UTF-8。</li>
+      <li>檔案最後加入一行空白。</li>
     </ul>
-    <p>Consider documenting and applying these preferences to your project's <code>.editorconfig</code> file. For an example, see <a href="https://github.com/twbs/bootstrap/blob/master/.editorconfig">the one in Bootstrap</a>. Learn more <a href="http://editorconfig.org">about EditorConfig</a>.</p>
+    <p>考慮將以上偏好應用到專案的 <code>.editorconfig</code> 檔案並撰寫文件說明。舉個例子，參考 <a href="https://github.com/twbs/bootstrap/blob/master/.editorconfig">Bootstrap 的 <code>.editorconfig</code></a>。瞭解更多內容，請參考 <a href="http://editorconfig.org">editorconfig.org</a>。</p>
   </div>
 </div>
