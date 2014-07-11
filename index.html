@@ -190,9 +190,9 @@ layout: default
             <li>每條宣告應自成一行，錯誤會回報的更精準。</li>
             <li>每條宣告用分號結束。</li>
             <li>以逗號分隔的特性，逗號後要加一個空白（比如右例的 <code>box-shadow</code>，<code>inset</code>前方逗號後有留空白）。</li>
-            <li><code>rgb()</code>、<code>rgba()</code>、<code>hsl()</code>、<code>hsla()</code> 或 <code>rect()</code>裡的數值，逗號後不要加空白。這讓色彩值（逗號後不加空白）與特性值（逗號後加空白）可以區分出來。小數值簡寫成 <code>.5</code>，不要寫成 <code>0.5</code>。</li>
-            <li>hex 值全小寫，如：<code>#fff</code>。在快速掃過文件時，小寫符號比大寫符號更容易分辨，因為形狀較為不同。</li>
-            <li>盡可能使用 hex 值的簡寫，比如用 <code>#fff</code> 來取代 <code>#ffffff</code>。</li>
+            <li class="is-controversial"><code>rgb()</code>、<code>rgba()</code>、<code>hsl()</code>、<code>hsla()</code> 或 <code>rect()</code>裡的數值，逗號後不要加空白。這讓色彩值（逗號後不加空白）與特性值（逗號後加空白）可以區分出來。小數值簡寫成 <code>.5</code>，不要寫成 <code>0.5</code>。</li>
+            <li class="is-controversial">hex 值全小寫，如：<code>#fff</code>。在快速掃過文件時，小寫符號比大寫符號更容易分辨，因為形狀較為不同。</li>
+            <li class="is-controversial">盡可能使用 hex 值的簡寫，比如用 <code>#fff</code> 來取代 <code>#ffffff</code>。</li>
             <li>選擇器中的屬性值要用雙引號包起來，比如 <code>input[type="text"]</code>。<a href="http://mathiasbynens.be/notes/unquoted-attribute-values#css">屬性值只有某些情況下可省略</a>，加引號的一致性更好。</li>
             <li>0 不用寫單位。寫成 <code>margin: 0;</code> 而不是 <code>margin: 0px;</code>。</li>
         </ul>
@@ -299,7 +299,7 @@ layout: default
     <div class="col">
         <h3>Class 名稱</h3>
         <ul>
-            <li>Class 名稱為小寫，使用連接號，dash。（不要使用底線或 camelCase）。連接號作為相關 Class 的分類符。（像是 <code>.btn</code> 和 <code>.btn-danger</code>）。</li>
+            <li class="is-controversial">Class 名稱為小寫，使用連接號，dash。（不要使用底線或 camelCase）。連接號作為相關 Class 的分類符。（像是 <code>.btn</code> 和 <code>.btn-danger</code>）。</li>
             <li>避免使用過短、隨便的縮寫。 <em>button</em> 簡寫為 <code>.btn</code> 很好，但 <code>.s</code> 不代表任何元素。</li>
             <li>盡量保持 Class 簡潔有力。</li>
             <li>使用有意義的名字；使用有意義、能說明結構的名稱，而不是外表看起來的名稱。</li>
