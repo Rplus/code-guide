@@ -4,4 +4,4 @@ url:           http://juanitofatas.github.io/code-guide
 
 markdown:      rdiscount
 permalink:     pretty
-pygments:      true
+highlighter:   true
