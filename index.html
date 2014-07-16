@@ -182,18 +182,22 @@ layout: default
     <div class="col">
         <h3>語法</h3>
         <ul>
-            <li>使用 4 個空格的 soft tabs ─這是唯一可以保證程式碼在任何環境下，render 結果一致的方法。</li>
+            <li>使用 4 個空格的 soft tabs <br>
+                ─ 這是唯一可以保證程式碼在任何環境下，render 結果一致的方法。</li>
             <li>幫選擇器分組時，獨立的選擇器自成一行。</li>
             <li>左大括號左邊留 1 個空白來提升可讀性。</li>
             <li>右大括號應另起新行。</li>
             <li>每條宣告裡的 <code>:</code> 後面留一個空白。</li>
             <li>每條宣告應自成一行，錯誤會回報的更精準。</li>
             <li>每條宣告用分號結束。</li>
-            <li>以逗號分隔的特性，逗號後要加一個空白（比如右例的 <code>box-shadow</code>，<code>inset</code>前方逗號後有留空白）。</li>
+            <li>以逗號分隔的特性，逗號後要加一個空白<br>
+                （比如右例的 <code>box-shadow</code>，<code>inset</code>前方逗號後有留空白）。</li>
             <li class="is-controversial"><code>rgb()</code>、<code>rgba()</code>、<code>hsl()</code>、<code>hsla()</code> 或 <code>rect()</code>裡的數值，逗號後不要加空白。這讓色彩值（逗號後不加空白）與特性值（逗號後加空白）可以區分出來。小數值簡寫成 <code>.5</code>，不要寫成 <code>0.5</code>。</li>
-            <li class="is-controversial">hex 值全小寫，如：<code>#fff</code>。在快速掃過文件時，小寫符號比大寫符號更容易分辨，因為形狀較為不同。</li>
+            <li class="is-controversial">hex 值全小寫，如：<code>#fff</code>。<br>
+                在快速掃過文件時，小寫符號比大寫符號更容易分辨，因為形狀較為不同。</li>
             <li class="is-controversial">盡可能使用 hex 值的簡寫，比如用 <code>#fff</code> 來取代 <code>#ffffff</code>。</li>
-            <li>選擇器中的屬性值要用雙引號包起來，比如 <code>input[type="text"]</code>。<a href="http://mathiasbynens.be/notes/unquoted-attribute-values#css">屬性值只有某些情況下可省略</a>，加引號的一致性更好。</li>
+            <li>選擇器中的屬性值要用雙引號包起來，比如 <code>input[type="text"]</code>。<br>
+                <a href="http://mathiasbynens.be/notes/unquoted-attribute-values#css">屬性值只有某些情況下可省略</a>，加引號的一致性更好。</li>
             <li>0 不用寫單位。寫成 <code>margin: 0;</code> 而不是 <code>margin: 0px;</code>。</li>
         </ul>
         <p>對於這裡使用的術語有任何問題嗎？請參考維基百科上關於<a href="http://en.wikipedia.org/wiki/Cascading_Style_Sheets#Syntax">層疊樣式表條目裡的語法小節</a>。</p>
