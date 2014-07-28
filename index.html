@@ -30,9 +30,9 @@ layout: default
             <li><a href="#css-prefixed-properties">具前綴的特性</a></li>
             <li><a href="#css-single-declarations">單一宣告規則</a></li>
             <li><a href="#css-shorthand">簡寫記法</a></li>
-            <li><a href="#css-nesting">Less 與 Sass 中的巢狀</a></li>
+            <li><a href="#css-nesting">CSS preprocessor (SASS, SCSS ...) 中的巢狀</a></li>
             <li><a href="#css-comments">註解</a></li>
-            <li><a href="#css-classes">類別</a></li>
+            <li><a href="#css-classes">Class 名稱</a></li>
             <li><a href="#css-selectors">選擇器</a></li>
             <li><a href="#css-organization">組織</a></li>
         </ul>
@@ -193,7 +193,7 @@ layout: default
             <li>以逗號分隔的特性，逗號後要加一個空白<br>
                 （比如右例的 <code>box-shadow</code>，<code>inset</code>前方逗號後有留空白）。</li>
             <li class="is-controversial">小數值簡寫成 <code>.5</code>，不要寫成 <code>0.5</code>。</li>
-            <li class="is-controversial">hex 值全小寫，如：<code>#fff</code>。<br>
+            <li>hex 值全小寫，如：<code>#fff</code>。<br>
                 在快速掃過文件時，小寫符號比大寫符號更容易分辨，因為形狀較為不同。</li>
             <li class="is-controversial">盡可能使用 hex 值的簡寫，比如用 <code>#fff</code> 來取代 <code>#ffffff</code>。</li>
             <li>選擇器中的屬性值要用雙引號包起來，比如 <code>input[type="text"]</code>。<br>
@@ -240,7 +240,6 @@ layout: default
     <div class="col">
         <h3>具前綴的屬性</h3>
         <p>使用帶有各家廠商前綴的屬性時，縮排每個屬性、垂直對齊，以便多行編輯。</p>
-        <p>Textmate 裡，使用 <strong>Text &rarr; Edit Each Line in Selection</strong> (&#8963;&#8984;A)。Sublime Text 2 則用 <strong>Selection &rarr; Add Previous Line</strong> (&#8963;&#8679;&uarr;) 和 <strong>Selection &rarr;  Add Next Line</strong> (&#8963;&#8679;&darr;)。</p>
     </div>
     <div class="col">
         {% highlight css %}{% include css/prefixed-properties.css %}{% endhighlight %}
@@ -280,8 +279,9 @@ layout: default
 
 <div class="section" id="css-nesting">
     <div class="col">
-        <h3>Less 和 Sass 裡的巢狀</h3>
-        <p>避免無謂的巢狀。你能巢狀不表示你都要用巢狀。只在多元素需要巢狀，或是需要在父元素下增加樣式的場景下使用巢狀。</p>
+        <h3>CSS preprocessor (SASS, SCSS ...) 裡的巢狀</h3>
+        <p>避免無謂的巢狀。可用巢狀不表示都要用巢狀。<br>
+            只在多元素需要巢狀，或是需要在父元素下增加樣式的場景下使用巢狀。</p>
     </div>
     <div class="col">
         {% highlight scss %}{% include css/nesting.scss %}{% endhighlight %}
@@ -291,7 +291,10 @@ layout: default
 <div class="section" id="css-comments">
     <div class="col">
         <h3>註解</h3>
-        <p>程式碼是由人來撰寫與維護的。確保程式碼精準描述、有良好的註解，讓別人看起來是很親切。好的註解傳遞意圖、意境。註解不要只是重複元件或是 Class 的名稱。</p>
+        <p>程式碼是由人來撰寫與維護的。<br>
+            確保程式碼精準描述、有良好的註解，讓別人看起來是很親切。<br>
+            好的註解傳遞意圖、意境。<br>
+            註解不要只是重複元件或是 Class 的名稱。</p>
         <p>長註解記得使用完整的句子，一般的筆記用簡潔的用語。</p>
     </div>
     <div class="col">
@@ -303,7 +306,9 @@ layout: default
     <div class="col">
         <h3>Class 名稱</h3>
         <ul>
-            <li class="is-controversial">Class 名稱為小寫，使用連接號，dash。（不要使用底線或 camelCase）。連接號作為相關 Class 的分類符。（像是 <code>.btn</code> 和 <code>.btn-danger</code>）。</li>
+            <li>採用 BEM naming, 兩個下底線代表階層，兩個連接號代表狀態</li>
+            <li>Class 名稱為小寫，非 BEM 規則時盡量使用連接號，dash。（不要使用底線或 camelCase）。<br>
+                連接號作為相關 Class 的分類符。（像是 <code>.btn</code> 和 <code>.btn-danger</code>）。</li>
             <li>避免使用過短、隨便的縮寫。 <em>button</em> 簡寫為 <code>.btn</code> 很好，但 <code>.s</code> 不代表任何元素。</li>
             <li>盡量保持 Class 簡潔有力。</li>
             <li>使用有意義的名字；使用有意義、能說明結構的名稱，而不是外表看起來的名稱。</li>
