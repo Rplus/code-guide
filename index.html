@@ -37,6 +37,7 @@ layout: default
             <li><a href="#css-classes">Class 名稱</a></li>
             <li><a href="#css-selectors">選擇器</a></li>
             <li><a href="#css-organization">組織</a></li>
+            <li><a href="#css-zindex-order">z-index 管理</a></li>
         </ul>
     </div>
 </div>
@@ -377,6 +378,25 @@ layout: default
     </div>
     <div class="col">
         {% highlight css %}{% include css/organization-comments.css %}{% endhighlight %}
+    </div>
+</div>
+
+<div class="section" id="css-zindex-order">
+    <div class="col">
+        <h3>z-index 管理</h3>
+        <p>
+            羅列目前較有 z-index 問題如下：
+        </p>
+        <ol>
+            <li>@首頁: globalbar</li>
+            <li>@前台: topbar</li>
+            <li>@前台: AD, MIB.freeze</li>
+            <li>@後台: dialog</li>
+        </ol>
+        <p>
+            基本 <code>z-index</code> = order 數字 * 1000，<br>
+            <strong>有異動需更新文件</strong>
+        </p>
     </div>
 </div>
 
