@@ -19,6 +19,7 @@ layout: default
             <li><a href="#html-boolean-attributes">布林屬性</a></li>
             <li><a href="#html-reducing-markup">減少 Markup</a></li>
             <li><a href="#html-javascript">JavaScript 產生的 Markup</a></li>
+            <li><a href="#html-basic-layout">基本版面區塊</a></li>
             <li><a href="#html-common-class-for-status">常見狀態的 Class</a></li>
         </ul>
     </div>
@@ -170,6 +171,15 @@ layout: default
     <div class="col">
         <h3>JavaScript 產生的 Markup</h3>
         <p>Markup 寫在 JavaScript 裡，不僅難找、也更難編輯，性能更是差。盡量避免在 JavaScript 裡撰寫 Markup。</p>
+    </div>
+</div>
+
+<div class="section" id="html-basic-layout">
+    <div class="col">
+        <h3>基本版面區塊</h3>
+    </div>
+    <div class="col">
+        {% highlight jade %}{% include html/basic-layout.html %}{% endhighlight %}
     </div>
 </div>
 
